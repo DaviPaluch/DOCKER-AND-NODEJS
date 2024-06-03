@@ -1,0 +1,17 @@
+version: '3'
+#versao do compose
+
+services:
+#serviços da aplicacao
+  app:
+  #uma aplicacao do projeto (nome é editavel)
+    build: .
+    #qual é a localização do docker file dessa aplicação que estamos executando
+    command: npm start
+    #comando que eu quero executar quando minha aplicação subir
+    ports:
+      - "3000:3000"
+    volumes:
+    #qual pasta que eu quero refletir as alterações que 
+      - .:/usr/app
+      #é pasta onde está nossa aplicação. Usamos o comando 'WORKDIR' em 'Dockerfile' indicando onde nossa aplicação irá rodar. 
