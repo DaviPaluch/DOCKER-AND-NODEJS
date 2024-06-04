@@ -6,7 +6,16 @@ const HOST = '0.0.0.0';
 const app = express()
 
 app.get('/', (req, res) => {
-    res.send('hello word')
+    return res.json({message:"hello word!",mimu:"jkl"})
 })
+
+app.post("/courses",(req,res)=>{
+    return res.send("teste");
+})
+
+app.get("/courses",(req,res)=>{
+    return res.send("teste");
+})
+
 
 app.listen(PORT,HOST);
