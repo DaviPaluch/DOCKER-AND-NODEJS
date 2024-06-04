@@ -13,9 +13,16 @@ app.post("/courses",(req,res)=>{
     return res.send("teste");
 })
 
-app.get("/courses",(req,res)=>{
+app.put("/courses/:id",(req,res)=>{
     return res.send("teste");
 })
 
+app.patch("/courses/:id",(req,res)=>{
+    return res.json(["teste","teste"])
+})
+
+app.delete("/courses/:id",(req,res)=>{
+    return res.json(["teste","teste"])
+})
 
 app.listen(PORT,HOST);
